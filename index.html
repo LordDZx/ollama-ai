@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شرح Ollama</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #00c9a7;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #000;
+    }
+    main {
+      padding: 30px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #00ffc8;
+      border-bottom: 1px solid #00ffc8;
+      padding-bottom: 5px;
+    }
+    pre {
+      background-color: #1e1e1e;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      direction: ltr;
+      color: #0f0;
+    }
+    a.whatsapp-btn {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 15px 25px;
+      background-color: #25D366;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.whatsapp-btn:hover {
+      background-color: #1db954;
+    }
+    footer {
+      text-align: center;
+      color: #aaa;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>شرح تثبيت مشروع Ollama</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>🔰 ما هو Ollama؟</h2>
+      <p>
+        مشروع Ollama هو برنامج مفتوح المصدر يسمحلك بتشغيل موديلات ذكاء اصطناعي محليًا على جهازك سواء موبايل أو كمبيوتر. مفيد للمطورين أو الناس اللي بتحب تجرب موديلات AI بدون الحاجة لاتصال دائم بالإنترنت.
+      </p>
+    </section>
+
+    <section>
+      <h2>📱 التثبيت على الموبايل (Termux)</h2>
+      <ol>
+        <li>فتح Termux وكتابة التالي لتحديث الحزم:</li>
+        <pre>pkg upgrade</pre>
+        <li>تثبيت الأدوات المطلوبة:</li>
+        <pre>pkg install git cmake golang</pre>
+        <li>تحميل المشروع من GitHub:</li>
+        <pre>git clone --depth 1 https://github.com/ollama/ollama.git</pre>
+        <li>الدخول للمجلد وبناء المشروع:</li>
+        <pre>cd ollama
+go build .</pre>
+        <li>تشغيل الموديل:</li>
+        <pre>./ollama run deepseek-r1:1.5b --verbose</pre>
+      </ol>
+    </section>
+
+    <section>
+      <h2>💻 التثبيت على الكمبيوتر (Linux)</h2>
+      <ol>
+        <li>تأكد إن Go و Git و CMake متثبتين:</li>
+        <pre>sudo apt update && sudo apt install git cmake golang</pre>
+        <li>تحميل المشروع:</li>
+        <pre>git clone --depth 1 https://github.com/ollama/ollama.git</pre>
+        <li>الدخول للمجلد:</li>
+        <pre>cd ollama</pre>
+        <li>بناء المشروع:</li>
+        <pre>go build .</pre>
+        <li>تشغيل موديل الذكاء الاصطناعي:</li>
+        <pre>./ollama run deepseek-r1:1.5b --verbose</pre>
+      </ol>
+    </section>
+
+    <section>
+      <h2>🪟 التثبيت على ويندوز</h2>
+      <ol>
+        <li>حمّل <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a></li>
+        <li>نزّل <a href="https://go.dev/dl/" target="_blank">Golang</a> وثبّته.</li>
+        <li>افتح Git Bash أو CMD:</li>
+        <pre>git clone --depth 1 https://github.com/ollama/ollama.git
+cd ollama
+go build .
+./ollama run deepseek-r1:1.5b --verbose</pre>
+      </ol>
+    </section>
+
+    <a class="whatsapp-btn" href="https://wa.me/201098662418" target="_blank">📲 تواصل معايا على واتساب</a>
+  </main>
+
+  <footer>
+    &copy; 2025 AhmedR - كل الحقوق محفوظة
+  </footer>
+
+</body>
+</html>
